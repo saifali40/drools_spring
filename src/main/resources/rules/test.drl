@@ -6,5 +6,4 @@ rule "Calculate Passport Fee"
         $model: WorkerModel(actionType == "EVENT_CREATE")
     then
         $model.setPrevId("Success");
-        System.out.println("action type is EventCreate");
 end
