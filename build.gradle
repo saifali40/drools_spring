@@ -30,6 +30,10 @@ dependencies {
 	implementation "org.drools:drools-mvel:$drools_version"
 	implementation "org.drools:drools-xml-support:$drools_version"
 
+	implementation "org.drools:drools-decisiontables:$drools_version"
+	implementation "org.drools:drools-compiler:$drools_version"
+
+
 	scm 'org.eclipse.jgit:org.eclipse.jgit:4.9.2.201712150930-r'
 
 
