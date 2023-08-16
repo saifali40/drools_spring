@@ -1,0 +1,10 @@
+package rules
+import com.example.test.drool.model.WorkerModel
+
+rule "Calculate Passport Fee"
+    when
+        $model: WorkerModel(actionType == "EVENT_CREATE")
+    then
+        $model.setPrevId("Success");
+        System.out.println("action type is EventCreate");
+end

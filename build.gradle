@@ -1,0 +1,40 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.2'
+	id 'io.spring.dependency-management' version '1.1.2'
+
+}
+
+group = 'com.example.test'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+configurations {
+	scm
+}
+
+repositories {
+	mavenCentral()
+}
+var drools_version = '8.42.0.Final'
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+
+	implementation "org.drools:drools-bom:$drools_version"
+	implementation "org.kie:kie-api:$drools_version"
+	implementation "org.drools:drools-core:$drools_version"
+	implementation "org.drools:drools-mvel:$drools_version"
+	implementation "org.drools:drools-xml-support:$drools_version"
+
+	scm 'org.eclipse.jgit:org.eclipse.jgit:4.9.2.201712150930-r'
+
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
