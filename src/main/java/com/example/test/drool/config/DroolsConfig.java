@@ -34,7 +34,7 @@ public class DroolsConfig {
         DecisionTableConfiguration decisionTableConfiguration = new DecisionTableConfigurationImpl();
         FileSystemResource
                 spreadsheetFile =
-                new FileSystemResource(getFile("rules/test.drl.xlsx"));
+                new FileSystemResource(getFile("rules/rules.drl.xlsx"));
 
         String generatedDrl = DecisionTableFactory.loadFromResource(spreadsheetFile, decisionTableConfiguration);
 

@@ -1,6 +1,6 @@
 package com.example.test.drool.services;
 
-import com.example.test.drool.model.WorkerModel;
+import com.example.test.drool.model.HookLogger;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ public class TestService {
     @Autowired
     private KieContainer kieContainer;
 
-    public WorkerModel getDiscount(WorkerModel orderRequest) {
+    public HookLogger getDiscount(HookLogger orderRequest) {
         KieSession kieSession = kieContainer.newKieSession();
         kieSession.insert(orderRequest);
         kieSession.fireAllRules();
